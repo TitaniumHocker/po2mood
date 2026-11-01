@@ -76,6 +76,30 @@ curl -fLo ~/.config/kitty/themes/po2mood.conf --create-dirs \
 Then apply it with `kitten themes po2mood`, or add `include themes/po2mood.conf`
 to `kitty.conf`.
 
+### Shaders
+
+kitty 0.49+ can run [custom shaders](https://sw.kovidgoyal.net/kitty/custom-shaders/).
+po2mood ships two:
+
+- `po2mood-fence` — a subtle PO-2 pyramid relief behind the text. Only the
+  default background is touched, and text stays above 4.5:1 contrast.
+  Tune `CELL_SIZE` and `RELIEF` with `var` lines in the pipeline file.
+- `po2mood-cursor` — kitty's built-in `cursor-trail-blaze` in palette colors.
+  Needs `cursor_trail 1` or higher.
+
+```sh
+for f in po2mood-fence.pipeline po2mood-fence.slang po2mood-cursor.pipeline; do
+  curl -fLo ~/.config/kitty/shaders/$f --create-dirs \
+    https://raw.githubusercontent.com/TitaniumHocker/po2mood/master/extras/kitty/shaders/$f
+done
+```
+
+Then in `kitty.conf` (use either one or both):
+
+```conf
+custom_shaders po2mood-fence po2mood-cursor
+```
+
 ## License
 
 [MIT](LICENSE). Original theme by nightsense.

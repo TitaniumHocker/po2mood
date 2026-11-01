@@ -1,0 +1,6 @@
+# PO-2 concrete fence relief behind the text.
+startgroup
+    # static effect: redraw only when the content changes
+    animation_step 0
+    shaders po2mood-fence
+endgroup

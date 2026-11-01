@@ -1,0 +1,11 @@
+# kitty's built-in blaze cursor trail in po2mood colors.
+# Needs `cursor_trail 1` (or higher) in kitty.conf. Colors are linear RGB.
+startgroup
+    animation_start cursor-trail-move
+    animation_stop cursor-trail-stop
+    # search #c7b46e
+    var float4 TRAIL_COLOR = float4(0.5711, 0.4564, 0.1559, 1.0)
+    # red #834742
+    var float4 TRAIL_COLOR_ACCENT = float4(0.2270, 0.0630, 0.0545, 1.0)
+    shaders cursor-trail-blaze
+endgroup
