@@ -2,6 +2,8 @@
 
 A warm, low-contrast sepia light theme for Neovim, tmux and kitty.
 
+![po2mood in Neovim inside tmux and kitty, with the PO-2 background shader](images/screenshot.png)
+
 Named after the PO-2 concrete fence panel: a light, slightly warm gray
 canvas with muted, earthy accents.
 
