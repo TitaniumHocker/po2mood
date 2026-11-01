@@ -152,7 +152,7 @@ end
 
 local term = {
   p.bg, p.red, p.green, p.gold, p.blue, p.magenta, p.cyan, p.fg,
-  p.bg_alt, p.red, p.green, p.gold, p.blue, p.magenta, p.cyan, p.fg_strong,
+  p.comment, p.red, p.green, p.gold, p.blue, p.magenta, p.cyan, p.fg_strong,
 }
 for i, color in ipairs(term) do
   vim.g['terminal_color_' .. (i - 1)] = color

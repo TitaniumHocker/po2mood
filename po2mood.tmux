@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # po2mood tmux theme. Colors mirror lua/po2mood/palette.lua.
 
-bg='#d3d2ce'
-bg_alt='#c3c0ba'
-border='#989387'
-comment='#5f5a4c'
+bg='#dedcd8'
+bg_alt='#cccac4'
+border='#a19c90'
+comment='#595446'
 fg='#444136'
 green='#2c633f'
 blue='#3c5a89'

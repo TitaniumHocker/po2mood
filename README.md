@@ -2,30 +2,37 @@
 
 A warm, low-contrast sepia light theme for Neovim, tmux and kitty.
 
+Named after the PO-2 concrete fence panel: a light, slightly warm gray
+canvas with muted, earthy accents.
+
 Forked from [nightsense/rusticated](https://github.com/nightsense/rusticated),
-which is no longer maintained. The palette is inherited unchanged; everything
-around it has been rewritten for modern tools.
+which is no longer maintained.
 
 ## Palette
 
 The palette lives in [`lua/po2mood/palette.lua`](lua/po2mood/palette.lua).
 The tmux and kitty files copy the same values.
 
-| Name        | Hex       | Used for                          |
-|-------------|-----------|-----------------------------------|
-| `bg`        | `#d3d2ce` | background                        |
-| `bg_alt`    | `#c3c0ba` | cursorline, popups, inactive bars |
-| `border`    | `#989387` | separators, matching parens       |
-| `comment`   | `#5f5a4c` | comments, line numbers            |
-| `fg`        | `#444136` | normal text                       |
-| `fg_strong` | `#312d23` | cursor, bright white              |
-| `search`    | `#bca964` | search highlight                  |
-| `red`       | `#834742` | identifiers, functions, errors    |
-| `gold`      | `#645826` | specials, delimiters              |
-| `green`     | `#2c633f` | statements, keywords              |
-| `cyan`      | `#006470` | preprocessor, todos               |
-| `blue`      | `#3c5a89` | constants, strings, selection     |
-| `magenta`   | `#784872` | types, warnings                   |
+Colors are defined in CIE LCh. Grays share one warm hue; the six accents share
+one lightness and chroma and are spaced 60° apart in hue. Every color is tuned
+to a round [WCAG contrast ratio](https://www.w3.org/TR/WCAG21/#contrast-minimum)
+against the background, so all text clears the 4.5:1 AA threshold.
+
+| Name        | Hex       | Contrast | Used for                                |
+|-------------|-----------|----------|-----------------------------------------|
+| `bg`        | `#dedcd8` | —        | background                              |
+| `bg_alt`    | `#cccac4` | 1.2:1    | cursorline, popups, inactive bars       |
+| `search`    | `#c7b46e` | 1.5:1    | search highlight                        |
+| `border`    | `#a19c90` | 2:1      | separators, matching parens             |
+| `comment`   | `#595446` | 5.5:1    | comments, line numbers, ANSI bright black |
+| `fg`        | `#444136` | 7.5:1    | normal text                             |
+| `fg_strong` | `#312d23` | 10:1     | cursor, ANSI bright white               |
+| `red`       | `#834742` | 5.2:1    | identifiers, functions, errors          |
+| `gold`      | `#645826` | 5.2:1    | specials, delimiters                    |
+| `green`     | `#2c633f` | 5.2:1    | statements, keywords                    |
+| `cyan`      | `#006470` | 5:1      | preprocessor, todos                     |
+| `blue`      | `#3c5a89` | 5.1:1    | constants, strings, selection           |
+| `magenta`   | `#784872` | 5.2:1    | types, warnings                         |
 
 ## Neovim
 
