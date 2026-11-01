@@ -87,11 +87,19 @@ po2mood ships two:
 - `po2mood-cursor` — kitty's built-in `cursor-trail-blaze` in palette colors.
   Needs `cursor_trail 1` or higher.
 
+Background relief:
+
 ```sh
-for f in po2mood-fence.pipeline po2mood-fence.slang po2mood-cursor.pipeline; do
-  curl -fLo ~/.config/kitty/shaders/$f --create-dirs \
-    https://raw.githubusercontent.com/TitaniumHocker/po2mood/master/extras/kitty/shaders/$f
-done
+curl -fL --create-dirs --output-dir ~/.config/kitty/shaders \
+  -O https://raw.githubusercontent.com/TitaniumHocker/po2mood/master/extras/kitty/shaders/po2mood-fence.pipeline \
+  -O https://raw.githubusercontent.com/TitaniumHocker/po2mood/master/extras/kitty/shaders/po2mood-fence.slang
+```
+
+Cursor trail:
+
+```sh
+curl -fL --create-dirs --output-dir ~/.config/kitty/shaders \
+  -O https://raw.githubusercontent.com/TitaniumHocker/po2mood/master/extras/kitty/shaders/po2mood-cursor.pipeline
 ```
 
 Then in `kitty.conf` (use either one or both):
