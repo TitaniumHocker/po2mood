@@ -83,7 +83,8 @@ to `kitty.conf`.
 kitty 0.49+ can run [custom shaders](https://sw.kovidgoyal.net/kitty/custom-shaders/).
 po2mood ships two:
 
-- `po2mood-fence` — a subtle PO-2 pyramid relief behind the text. Only the
+- `po2mood-fence` — a subtle PO-2 panel relief behind the text, after the
+  IZh 31-77 drawing. Only the
   default background is touched, and text stays above 4.5:1 contrast.
   Tune `CELL_SIZE` and `RELIEF` with `var` lines in the pipeline file.
 - `po2mood-cursor` — kitty's built-in `cursor-trail-blaze` in palette colors.
